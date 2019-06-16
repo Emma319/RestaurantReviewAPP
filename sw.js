@@ -3,6 +3,7 @@ var CACHE_FILES = [
         '/index.html',
         '/restaurant.html',
         '/css/styles.css',
+        '/data/restaurants.json',
         '/js/main.js',
         '/js/restaurant_info.js',
         '/js/dbhelper.js',
