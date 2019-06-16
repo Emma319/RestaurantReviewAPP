@@ -154,7 +154,11 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph}`);
+    // for local use
+    // return (`/img/${restaurant.photograph}`);
+    
+    // for live URL
+    return (`https://emma319.github.io/RestaurantReviewAPP/img/${restaurant.photograph}`);
   }
 
   /**
