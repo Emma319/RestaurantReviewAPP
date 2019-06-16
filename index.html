@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Udacity Project Restaurant Reviews App">
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+  <title>Restaurant Reviews</title>
+</head>
+
+<body>
+  <header>
+    <nav aria-labelledby="aria-restaurant-reviews-home">
+      <h1 id="aria-restaurant-reviews-home"><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+    <section id="map-container" aria-labelledby="aria-map" role="application">
+      <div id="map" aria-labelledby="aria-map"></div>
+      <label id="aria-map" class="aria-label">Interactive Map</label>
+    </section>
+
+    <section id="restaurants-container">
+      <div class="filter-options">
+        <h2 id="filter-label" aria-labelledby="aria-filter-label" tabindex="0">Filter Results</h2>
+        <label id="aria-filter-label" class="aria-label">Filter Results</label>
+
+        <div class="filter-selects">
+          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-labelledby="aria-neighborhoods-select" role="listbox">
+            <option value="all" role="option">All Neighborhoods</option>
+          </select>
+          <label id="aria-neighborhoods-select" class="aria-label">Neighborhoods Drop-List</label>
+
+          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-labelledby="aria-cuisines-select" role="listbox">
+            <option value="all" role="option">All Cuisines</option>
+          </select>
+          <label id="aria-cuisines-select" class="aria-label">Cuisines Drop-List</label>
+        </div>
+      </div>
+
+      <ul id="restaurants-list" aria-labelledby="aria-restaurants-list"></ul>
+      <label id="aria-restaurants-list" class="aria-label">Restaurants List</label>
+    </section>
+  </main>
+
+  <footer id="footer" aria-labelledby="aria-footer">
+    <label id="aria-footer" class="aria-label">Footer: Copyright Statement</label>
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+  <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+  <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+  <script type="application/javascript" charset="utf-8" src="js/register.js"></script>
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
+
+</body>
+
+</html>
