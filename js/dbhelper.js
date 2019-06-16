@@ -5,11 +5,15 @@ class DBHelper {
 
   /**
    * Database URL.
-   * Change this to restaurants.json file location on your server.
+   * Change this to restaurants.json file location on the server.
    */
   static get DATABASE_URL() {
-    const port = 8000 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
+    // for local use
+    // const port = 8000 // Change this to your server port
+    // return `http://localhost:${port}/data/restaurants.json`;
+    
+    // for live URL
+    return `https://emma319.github.io/RestaurantReviewAPP/data/restaurants.json`;
   }
 
   /**
